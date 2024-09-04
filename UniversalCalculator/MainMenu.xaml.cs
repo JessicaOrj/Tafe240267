@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -44,6 +45,12 @@ namespace Calculator
 		private void exitButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
 		{
 			CoreApplication.Exit();
+		}
+
+		private async void tripCalculator_Click(object sender, RoutedEventArgs e)
+		{
+			var dialogMessage = new MessageDialog("Trip calculator C# code will be developed later");
+			await dialogMessage.ShowAsync();
 		}
 	}
 }
